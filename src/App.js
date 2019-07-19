@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Form from './Form';
+import MyButton from './components/Button';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <MyButton />
     </div>
   );
 }
