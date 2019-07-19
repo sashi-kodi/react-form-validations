@@ -1,19 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import * as styles from '../my-components.module.scss';
-console.log(styles);
-console.log(styles['mdc-button']);
-// const useStyles = makeStyles({
-//     root: styles['mdc-button']
-// }
-//   );
-  
+
+import '../my-components.scss';
 const MyButton = (props)=>{
-    //const classes = useStyles();
-  
     return(
-    <Button classes={{root:'my-components_mdc-button__36ZzM'}}>Hello World</Button>
+        <Button classes={{root:'mdc-button'}}>Hello Material UI</Button>
     )
 }
 export default MyButton;
