@@ -25,6 +25,9 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
+  shape: {
+    borderRadius: 8
+  }
 });
 
 export default theme;
