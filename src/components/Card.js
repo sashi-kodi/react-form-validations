@@ -8,16 +8,17 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import picture from '../lizard.jpg';
 
 
-
-const MyCard = (props)=>{
+const MyCard = (props)=>{       
 
   return (
     <Card classes={{root:'mdc-card'}} style={{margin:'auto'}}>
       <CardActionArea>
         <CardMedia
-          image="https://unsplash.com/photos/5DB3cYe7Nxk"
+          component="img"
+          src={picture}
           title="Contemplative Reptile"
         />
         <CardContent className='demo-card__primary'>
