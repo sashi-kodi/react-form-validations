@@ -30,11 +30,10 @@ class Form extends Component{
     handleSubmit=(e)=>{
         e.preventDefault();
         console.log(this.state);
-       
     }
     
      validateName=()=>{
-        const pattern=/^([a-zA-Z@]+[0-9]*)$/;
+        const pattern=/^([a-zA-Z@ _]+)$/;
         let isValid =true;
          let errormessage="";
          
@@ -42,16 +41,17 @@ class Form extends Component{
             errormessage='Name is required field';  
              isValid=false;
          }
+         if(isValid && !this.state.name.match(pattern)){
+            errormessage='Name must contain only alphabets'; 
+             isValid=false;
+            }
         //checking if the username is 8 characters long
          if(isValid && this.state.name.length<8){
               errormessage='Name must be atleast 8 characters long'; 
              isValid=false;
           }
             
-         if(isValid && !this.state.name.match(pattern)){
-            errormessage='Name must contain only alpha numeric characters and atleast one letter'; 
-             isValid=false;
-            }
+        
         //checking if the name includes @
           if (isValid && !this.state.name.includes('@')){
              errormessage='Name must contain @'; 
