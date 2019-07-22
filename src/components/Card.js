@@ -1,58 +1,45 @@
-import React from 'react';
+ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 import '../my-components.scss';
 
+
 const MyCard = (props)=>{
-    return(
-            <Card className='.mdc-card'>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="Recipe">
-                    R
-                  </Avatar>
-                }
-                action={
-                  <IconButton aria-label="Settings">
-                    <MoreVertIcon />
-                  </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
-              />
-              <CardMedia
-                image="/static/images/cards/paella.jpg"
-                title="Paella dish"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together with your
-                  guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="Add to favorites">
-                  <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="Share">
-                  <ShareIcon />
-                </IconButton>
-              </CardActions>
-            </Card>
-          );
-        }
+
+  return (
+    <Card classes={{root:'mdc-card'}} style={{margin:'auto'}}>
+      <CardActionArea>
+        <CardMedia
+          image="https://unsplash.com/photos/5DB3cYe7Nxk"
+          title="Contemplative Reptile"
+        />
+        <CardContent className='demo-card__primary'>
+          <Typography gutterBottom variant="h5" component="h2" className="demo-card__title">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className="demo-card__secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
+  );
+}
+        
 export default MyCard;

@@ -91,7 +91,7 @@ class Form extends Component{
     
     render(){
         return(
-        <form onSubmit={this.handleSubmit}   noValidate style={{marginLeft:'50px'}}>
+        <form onSubmit={this.handleSubmit}   noValidate style={{width:'80%', margin:'auto'}}>
             <TextField
             required
             inputProps={{minLength:6, maxLength:15}}
